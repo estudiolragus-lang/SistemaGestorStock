@@ -1,59 +1,20 @@
-# GestorStock
+src/
+├── app/
+│   ├── core/      # Servicios Singleton, Auth, Interceptors
+│   ├── features/  # Lógica de Negocio (Inventory, Sales, CRM)
+│   ├── layouts/   # Estructuras (Sidebar, Header, Auth)
+│   └── shared/    # Componentes UI reutilizables y Modelos
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.9.
 
-## Development server
+CORE: Contiene los servicios, interceptores y configuraciones que son Singletons (únicos en toda la aplicación).
+-> Aquí va todo lo que necesita la aplicación para "vivir" pero que no pertenece a una sola página.
 
-To start a local development server, run:
+FEATURES: La funcionalidad específica de la aplicación dividida en dominios.
+-> Cada subcarpeta es una funcionalidad independiente. Si mañana quieres quitar el módulo de "Fiados", solo borras 
+   esta carpeta y el resto del sistema no debería verse afectado.
 
-```bash
-ng serve
-```
+LAYOUTS: Define la estructura visual de las páginas.
+-> Permite separar componentes que son solo "envoltorios" (como el menú lateral y el header) del contenido principal.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+SHARED: Componentes, directivas y utilidades de "bajo nivel" reutilizables.
+->Todo lo que esté aquí no debe tener conocimiento de la lógica de negocio; son componentes que solo reciben datos y disparan eventos.

@@ -1,19 +1,18 @@
+$color-darkest:  #1F2326;
+$color-dark:     #3A3F44;
+$color-medium:   #6B645B;
+$color-light:    #B8B0A3;
+$color-lightest: #D8C9B6;
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
+
 }
 
 :root {
   //PARA COMPONENTES:
-  --var-margin-left: 280px; 
-
-  //PARA HOME:
-  --color-primary: #0f766e;
-  --color-text-main: #1e293b;
-  --color-text-muted: #64748b;
-  --color-bg-surface: #ffffff;
-  --space-lg: 0.5rem;
+  --var-margin-left: 280px;
 }

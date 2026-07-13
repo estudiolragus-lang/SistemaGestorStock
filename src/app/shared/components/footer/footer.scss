@@ -1,0 +1,129 @@
+@import '../../../../styles.scss';
+
+footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    padding: 40px 20px 20px;
+    margin-top: 50px;
+}
+.footer-columnas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--footer-line);
+}
+.footer-columnas h3 {
+    color: var(--footer-title);
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    margin-top: 0;
+}
+.footer-marca {
+    flex: 1 1 300px;
+}
+.footer-marca img {
+    max-width: 150px;
+    margin-bottom: 15px;
+}
+.footer-marca p {
+    line-height: 1.6;
+    margin: 0;
+}
+.footer-enlaces {
+    flex: 1 1 200px;
+}
+.footer-enlaces ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.footer-enlaces li {
+    margin-bottom: 12px;
+}
+.footer-enlaces a {
+    color: var(--footer-text);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.footer-enlaces a:hover {
+    color: var(--footer-accent);
+}
+
+.redesSociales {
+    flex: 1 1 200px;
+}
+.redesSociales > div {
+    margin-bottom: 15px;
+}
+.redesSociales a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--footer-text);
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+.redesSociales a:hover {
+    color: var(--footer-accent);
+    transform: translateX(5px);
+}
+.redesSociales img {
+    width: 24px;
+    height: 24px;
+    background-color: var(--footer-text); 
+    border-radius: 4px;
+}
+
+.footer-legal {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 20px auto 0;
+    font-size: 0.9rem;
+}
+
+.footer-legal p {
+    margin: 0;
+}
+
+.links-legales a {
+    color: var(--footer-text);
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.links-legales a:hover {
+    color: var(--footer-accent);
+}
+
+.redesSociales a i {
+    font-size: 1.2rem;
+    min-width: 24px;   
+    text-align: center;
+}
+.redesSociales a:hover i {
+    color: var(--footer-accent);
+}
+.redSocial1 a:hover { color: #E1306C; }
+.redSocial2 a:hover { color: #25D366; } 
+.redSocial3 a:hover { color: #0A66C2; } 
+
+@media (max-width: 768px) {
+    .footer-columnas {
+        flex-direction: column;
+    }
+    
+    .footer-legal {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+}

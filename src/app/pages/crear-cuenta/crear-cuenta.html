@@ -1,0 +1,23 @@
+<form [formGroup]="form()" (ngSubmit)="onSubmit()">
+
+    <div class="form-group">
+        <label for="Nombre">Nombre Completo:</label>
+        <input type="text" formControlName="NombreCompleto" id="NombreCompleto" name="NombreCompleto" placeholder="Ingrese Nombre Completo:">
+        <validation [control]="form().controls['NombreCompleto']" name="NombreCompleto" id="NombreCompleto" />
+    </div>
+
+    <div class="form-group">
+        <label for="Gmail">Gmail:</label>
+        <input type="Gmail" formControlName="Gmail" id="Gmail" name="Gmail" placeholder="Ingrese Gmail:">
+        <validation [control]="form().controls['Gmail']" name="Gmail" id="Gmail" />
+    </div>
+
+    <div class="form-group">
+        <label for="PasswordHash">Contraseña:</label>
+        <input type="text" formControlName="PasswordHash" id="PasswordHash" name="PasswordHash" placeholder="Ingrese Contraseña:">
+        <validation [control]="form().controls['PasswordHash']" name="PasswordHash" id="PasswordHash" />
+    </div>
+    
+
+    <button type="submit">Guardar</button>
+</form>

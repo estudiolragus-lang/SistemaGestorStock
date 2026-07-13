@@ -1,0 +1,71 @@
+.home-container {
+  padding: 4rem 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  min-height: 60vh;
+}
+
+.hero__title {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  color: var(--color-text-main);
+  margin-bottom: 1.5rem;
+}
+
+.hero__subtitle {
+  font-size: 1.25rem;
+  color: var(--color-text-muted);
+  margin-bottom: 2.5rem;
+  max-width: 600px;
+}
+
+/* Botón llamativo */
+.btn--primary {
+  background-color: var(--color-primary);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn--primary:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+}
+/* Contenedor de las tarjetas */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Crea columnas automáticamente */
+  gap: 2rem; /* Espacio entre tarjetas */
+  margin-top: 3rem;
+}
+
+/* Estilo de cada tarjeta */
+.card {
+  background: var(--color-bg-surface);
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid #E2E8F0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px); /* Efecto al pasar el mouse */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+  margin-top: 0;
+  color: var(--color-text-main);
+}

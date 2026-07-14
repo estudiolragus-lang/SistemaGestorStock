@@ -1,0 +1,15 @@
+<form [formGroup]="form" (ngSubmit)="vincular()">
+    <div>
+        <h1>INSERTAR CODIGO UNICO DE EMPRESA</h1>
+        <label for="codigo">Código:</label>
+        <input id="codigo" type="text" formControlName="CodigoUnico" placeholder="Ingresa el código aquí">
+        
+        <button type="submit" [disabled]="form.invalid || cargando()">
+            {{ cargando() ? 'Vinculando...' : 'Vincular' }}
+        </button>
+    </div>
+</form>
+
+@if (mensaje()) {
+    <p>{{ mensaje() }}</p>
+}

@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Interceptors } from './interceptors';
+import { LoguearCuenta } from './loguear-cuenta';
 
-describe('Interceptors', () => {
-  let component: Interceptors;
-  let fixture: ComponentFixture<Interceptors>;
+describe('LoguearCuenta', () => {
+  let component: LoguearCuenta;
+  let fixture: ComponentFixture<LoguearCuenta>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Interceptors]
+      imports: [LoguearCuenta]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(Interceptors);
+    fixture = TestBed.createComponent(LoguearCuenta);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

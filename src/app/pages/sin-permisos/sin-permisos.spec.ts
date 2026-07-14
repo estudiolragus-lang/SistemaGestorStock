@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Guards } from './guards';
+import { SinPermisos } from './sin-permisos';
 
-describe('Guards', () => {
-  let component: Guards;
-  let fixture: ComponentFixture<Guards>;
+describe('SinPermisos', () => {
+  let component: SinPermisos;
+  let fixture: ComponentFixture<SinPermisos>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Guards]
+      imports: [SinPermisos]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(Guards);
+    fixture = TestBed.createComponent(SinPermisos);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,0 +1,41 @@
+<div class="login-container">
+  <div class="login-card">
+    <h1>Login Student</h1>
+    <p>Ingresá tus credenciales para acceder al sistema.</p>
+
+    <form [formGroup]="form()" (ngSubmit)="onSubmit()">
+
+      <div class="form-group">
+        <label>Nombre Completo:</label>
+        <input
+          type="text"
+          formControlName="NombreCompleto"
+          placeholder="Ingrese Nombre Completo"
+        >
+      </div>
+
+      <div class="form-group">
+        <label>Correo (Gmail):</label>
+        <input
+          type="email"
+          formControlName="Gmail"
+          placeholder="Ingrese su correo"
+        >
+      </div>
+
+      <div class="form-group">
+        <label>Contraseña:</label>
+        <input
+          type="password"
+          formControlName="PasswordHash"
+          placeholder="Ingrese contraseña"
+        >
+      </div>
+
+      <button type="submit">
+        Ingresar
+      </button>
+
+    </form>
+  </div>
+</div>

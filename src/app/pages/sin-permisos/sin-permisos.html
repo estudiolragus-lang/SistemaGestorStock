@@ -1,0 +1,25 @@
+<section class="apartadoNoHabilitado">
+
+  <div class="tarjeta-critica entrada-animada">
+    <div class="icono-alerta">
+      <i class="fa-solid fa-triangle-exclamation"></i>
+    </div>
+    <h1>¡Acceso Restringido!</h1>
+    <p>
+      Estás intentando ingresar a una zona protegida del sistema. Por motivos de seguridad y para proteger los datos, 
+      <strong>es obligatorio</strong> tener una sesión activa.
+    </p>
+    <div class="botones-accion">
+      <button class="btn-primario" [routerLink]="['/LoguearCuenta']">
+        Iniciar Sesión
+      </button>
+      <button class="btn-secundario" [routerLink]="['/CrearCuenta']">
+        Crear una Cuenta
+      </button>
+      <button class="btn-secundario" [routerLink]="['/Home']">
+        Volver a Inicio
+      </button>
+    </div>
+  </div>
+  
+</section>

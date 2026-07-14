@@ -1,19 +1,18 @@
 
 @import '../../../styles.scss';
-
 body {
   background-color: $color-lightest; 
   color: $color-darkest;           
   line-height: 1.6;
 }
-
 .home-container {
   padding: 4rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
 }
-
 .hero {
+  position: relative;
+  border-left: 8px solid $color-medium; 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -24,27 +23,33 @@ body {
   margin-bottom: 5rem;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
 }
-
 .hero__content {
   max-width: 800px;
 }
-
 .hero__title {
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   line-height: 1.2;
   color: $color-darkest; 
   margin-bottom: 1.5rem;
   font-weight: 800;
   letter-spacing: -0.05rem;
 }
-
+.hero__content h1:not(.hero__title) {
+  font-size: 2rem;
+  line-height: 1.1;
+  color: $color-darkest;
+  margin-bottom: 1.5rem;
+  font-weight: 800;
+}
 .hero__subtitle {
   font-size: 1.25rem;
   color: $color-dark; 
-  margin-bottom: 2.5rem;
+  margin: 0 auto 2.5rem auto; 
+  max-width: 600px;          
+  line-height: 1.6;           
 }
-
 .btn--primary {
+  margin: 5px;
   background-color: $color-darkest;
   color: #ffffff;
   padding: 1rem 2.5rem;
@@ -56,33 +61,30 @@ body {
   transition: all 0.3s ease;
   box-shadow: 0 4px 14px 0 rgba(31, 35, 38, 0.3); 
 }
-
 .btn--primary:hover {
   transform: translateY(-3px);
   background-color: $color-dark; 
   box-shadow: 0 6px 20px rgba(31, 35, 38, 0.5);
 }
-
-/* --- SECCIÓN DE SERVICIOS --- */
 .contenedorServicios {
   display: flex;
   flex-direction: column;
   gap: 4rem;
+  background-color: #ffffff;
+  padding: 4rem; 
+  border-radius: 24px;
 }
-
 .contenedorTarjetas1 {
   text-align: center;
   max-width: 700px;
   margin: 0 auto;
 }
-
 .contenedorTarjetas1 h1 {
   font-size: 2.5rem;
   color: $color-darkest;
   margin-bottom: 1rem;
   font-weight: 800;
 }
-
 .contenedorTarjetas1 p {
   color: $color-dark;
   font-size: 1.1rem;
@@ -93,7 +95,6 @@ body {
   gap: 2rem;
   align-items: stretch;
 }
-
 .tarjetaServicio {
   background-color: #ffffff; 
   padding: 2.5rem;
@@ -103,7 +104,6 @@ body {
   position: relative;
   overflow: hidden;
 }
-
 .tarjetaServicio::before {
   content: "";
   position: absolute;
@@ -116,30 +116,35 @@ body {
   transform-origin: left;
   transition: transform 0.4s ease;
 }
-
 .tarjetaServicio:hover::before {
   transform: scaleX(1);
 }
-
 .tarjetaServicio:hover {
   transform: translateY(-10px);
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
   border-color: transparent;
 }
-
 .tarjetaServicio h2 {
   font-size: 1.4rem;
   color: $color-darkest;
   margin-bottom: 1rem;
   font-weight: 700;
 }
-
+.tarjetaServicio h2::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 3px;
+  background-color: $color-light;
+  margin: 12px 0;
+  border-radius: 2px;
+}
 .tarjetaServicio p {
   color: $color-medium;
   font-size: 1rem;
   line-height: 1.6;
+  letter-spacing: -0.02rem;
 }
-
 @media (max-width: 768px) {
   .hero {
     padding: 4rem 1.5rem;

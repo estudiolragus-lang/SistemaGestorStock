@@ -1,0 +1,89 @@
+@import '../../../styles.scss';
+
+.pantalla-oscura {
+  min-height: 100vh;
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  padding: 1rem; 
+    background: linear-gradient(135deg, #ffffff 0%, $color-light 100%);
+}
+form {
+  width: 100%; 
+  max-width: 420px; 
+  padding: 3rem 2.5rem;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 20px; 
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4); 
+  .form-group {
+    margin-bottom: 1.8rem;
+
+    label {
+      display: block;
+      margin-bottom: 0.6rem;
+      color: $color-dark; 
+      font-weight: 600;
+      font-size: 0.85rem;
+      text-transform: uppercase; 
+      letter-spacing: 0.5px;
+    }
+
+    input {
+      width: 100%; 
+      box-sizing: border-box;
+      padding: 1rem 1.2rem;
+      border: 1px solid rgba($color-light, 0.6);
+      border-radius: 10px; 
+      background-color: #fafafa; 
+      color: $color-darkest;
+      font-size: 1rem;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
+
+      &::placeholder {
+        color: rgba($color-medium, 0.6); 
+      }
+      &:focus {
+        outline: none;
+        border-color: $color-medium; 
+        background-color: #ffffff;
+        box-shadow: 0 0 0 4px rgba($color-medium, 0.15); 
+        transform: translateY(-2px); 
+      }
+    }
+
+    validation {
+      display: block;
+      margin-top: 0.5rem;
+      font-size: 1rem;
+      color: #e74c3c; 
+      font-weight: 500;
+    }
+  }
+  button[type="submit"] {
+    width: 100%;
+    margin-top: 1.5rem;
+    padding: 1.2rem;
+    background-color: $color-darkest; 
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba($color-darkest, 0.3); 
+
+    &:hover {
+      background-color: $color-medium; 
+      transform: translateY(-3px); 
+      box-shadow: 0 8px 25px rgba($color-darkest, 0.4);
+    }
+
+    &:active {
+      transform: translateY(0);
+      box-shadow: 0 2px 10px rgba($color-darkest, 0.3);
+    }
+  }
+}

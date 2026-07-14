@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Auth } from './auth';
+import { VincularEmpresa } from './vincular-empresa';
 
-describe('Auth', () => {
-  let component: Auth;
-  let fixture: ComponentFixture<Auth>;
+describe('VincularEmpresa', () => {
+  let component: VincularEmpresa;
+  let fixture: ComponentFixture<VincularEmpresa>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Auth]
+      imports: [VincularEmpresa]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(Auth);
+    fixture = TestBed.createComponent(VincularEmpresa);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
